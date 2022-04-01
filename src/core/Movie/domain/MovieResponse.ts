@@ -1,0 +1,27 @@
+export interface MovieResponse {
+  page: number
+  totalResults: number
+  totalPages: number
+  results: Movie[]
+}
+
+export interface Movie {
+  id: number
+  adult: boolean
+  backdropPath: string
+  originalLanguage: OriginalLanguage
+  originalTitle: string
+  overview: string
+  popularity: number
+  posterPath: string
+  releaseDate: string
+  title: string
+  voteAverage: number
+  voteCount: number
+}
+
+export enum OriginalLanguage {
+  En = 'en',
+  Hi = 'hi',
+  Ru = 'ru'
+}
