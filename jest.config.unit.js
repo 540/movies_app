@@ -1,6 +1,7 @@
 'use strict'
 
-var config = require('./jest.config')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+var config = require('./jest.config.js')
 config.testRegex = '\\.spec\\.(ts|js)$'
 config.setupFilesAfterEnv = ['./setupJestUnit.ts']
 

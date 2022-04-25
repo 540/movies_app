@@ -19,7 +19,7 @@ export const RatingBudge = ({ rating }: Props) => {
 const Budge = styled.div`
   position: absolute;
   right: 0;
-  bottom: 55px;
+  top: 330px;
   height: 20px;
   width: 40px;
   text-align: center;

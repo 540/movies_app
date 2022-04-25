@@ -20,6 +20,10 @@ export interface Movie {
   voteCount: number
 }
 
+export const instanceOfMovieResponse = (data: any): data is MovieResponse => {
+  return 'page' in data
+}
+
 export enum OriginalLanguage {
   En = 'en',
   Hi = 'hi',

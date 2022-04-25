@@ -4,14 +4,15 @@ import styled from 'styled-components'
 import { RatingBudge } from './_components/RatingBudge'
 import { DetailSummary, Foreground } from 'ui/Home/_components/PosterList/_components/Foreground'
 import { constants } from 'ui/_utils/constants'
+import { MovieDetail } from 'core/Movie/domain/MovieDetail'
 
 interface Props {
-  movie: Movie
+  movie: Movie | MovieDetail
 }
 
-export const PosterList = ({ movie }: Props) => {
+export const Poster = ({ movie }: Props) => {
   return (
-    <Poster>
+    <PosterRaw>
       <Center>
         <Image src={`${constants.imagePath}${movie.posterPath}`} height={340} width={240} borderRadius={10} />
         <RatingBudge rating={movie.voteAverage} />
@@ -23,11 +24,11 @@ export const PosterList = ({ movie }: Props) => {
         {movie.title}
       </Text>
       <DetailSummary movie={movie} />
-    </Poster>
+    </PosterRaw>
   )
 }
 
-const Poster = styled.div`
+const PosterRaw = styled.div`
   position: relative;
   width: 260px;
 

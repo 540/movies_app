@@ -5,10 +5,11 @@ import { Margins, marginsCss } from 'ui/_styles/mixins/margins'
 
 interface Props extends Margins {
   children: ReactNode
+  onClick?: () => void
 }
 
-export const PrimaryButton = ({ children }: Props) => {
-  return <StyledButton>{children}</StyledButton>
+export const PrimaryButton = ({ children, onClick }: Props) => {
+  return <StyledButton onClick={onClick}>{children}</StyledButton>
 }
 
 const StyledButton = styled.button`
@@ -23,5 +24,6 @@ const StyledButton = styled.button`
 
   &:hover {
     background-color: #e05d5e;
+    cursor: pointer;
   }
 `

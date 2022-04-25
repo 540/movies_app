@@ -18,15 +18,15 @@ export const DetailSummary = ({ movie }: Props) => (
     <Text as="p" bold size="medium" color="titleEmphasis">
       {movie.releaseDate}
     </Text>
-    <Box horizontal="base">
-      <PrimaryButton>
-        <Link href={`/detail/${movie.id}`}>
+    <Link href={`/detail/${movie.id}`}>
+      <Box horizontal="base">
+        <PrimaryButton>
           <Text as="span" size="medium">
             Ver Detalles
           </Text>
-        </Link>
-      </PrimaryButton>
-    </Box>
+        </PrimaryButton>
+      </Box>
+    </Link>
   </Foreground>
 )
 
@@ -40,5 +40,5 @@ export const Foreground = styled.div`
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to right, rgba(12, 20, 38, 0.7), rgba(9, 14, 31, 0.7));
+  background: rgba(9, 14, 31, 0.7);
 `

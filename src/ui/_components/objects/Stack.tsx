@@ -1,27 +1,18 @@
 import styled, { css } from 'styled-components'
 import { sizes, Spacing } from 'ui/_styles/size'
+import { alignmentCss, Alignments } from 'ui/_styles/mixins/margins'
 
-interface Props {
-  mainAxis?: string
-  crossAxis?: string
+interface Props extends Alignments {
   gap?: Spacing
+  flex?: number
 }
 
 export const Stack = styled.div<Props>`
+  ${alignmentCss};
+
   display: flex;
+  flex: ${props => props.flex ?? 1};
   flex-direction: column;
-
-  ${p =>
-    p.mainAxis &&
-    css`
-      justify-content: ${p.mainAxis};
-    `}
-
-  ${p =>
-    p.crossAxis &&
-    css`
-      align-items: ${p.crossAxis};
-    `}
 
   ${p =>
     p.gap &&

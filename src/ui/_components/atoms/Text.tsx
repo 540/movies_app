@@ -9,15 +9,18 @@ interface Props extends Margins {
   children: ReactNode
   as: string
   color?: Color
+  onClick?: () => void
   size?: FontSize
   bold?: boolean
 }
 
-const RawText = ({ as: As, children }: Props) => {
+const RawText = ({ as: As, onClick, children }: Props) => {
   return (
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    <As>{children}</As>
+    <div onClick={onClick}>
+      {/*eslint-disable-next-line @typescript-eslint/ban-ts-comment*/}
+      {/*@ts-ignore*/}
+      <As>{children}</As>
+    </div>
   )
 }
 
@@ -42,4 +45,8 @@ export const Text = styled(RawText)<Props>`
   ${p => isUndefined(p.size) && font.sizes.base()}
 
   font-weight: ${p => (p.bold ? 'bold' : 'normal')};
+
+  :hover {
+    cursor: ${p => (p.onClick ? 'pointer' : 'text')};
+  }
 `

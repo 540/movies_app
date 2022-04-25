@@ -1,1 +1,1 @@
-export { PosterList } from './PosterList'
+export { Poster } from './Poster'

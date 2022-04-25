@@ -1,6 +1,18 @@
 import { css } from 'styled-components'
 import { sizes } from 'ui/_styles/size'
 
+type Alignment = 'center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly' | 'stretch'
+
+export interface Alignments {
+  mainAxis?: Alignment
+  crossAxis?: Alignment
+}
+
+export const alignmentCss = css<Alignments>`
+  justify-content: ${({ mainAxis }) => mainAxis};
+  align-items: ${({ crossAxis }) => crossAxis};
+`
+
 export interface HorizontalMargins {
   marginRight?: keyof typeof sizes
   marginLeft?: keyof typeof sizes

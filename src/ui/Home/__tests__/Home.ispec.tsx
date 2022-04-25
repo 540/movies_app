@@ -1,16 +1,21 @@
-import { screen } from '@testing-library/react'
+import { screen, waitForElementToBeRemoved } from '@testing-library/react'
 import { Home } from 'ui/Home'
-import { aMovieCollection } from 'core/Movie/domain/builders/MoviesBuilder'
 import { movieService } from 'core/Movie/services/movieService'
 import { renderScreen } from '../../../_testUtils/utils'
+import { aMovieCollection } from 'core/Movie/domain/builders/MoviesBuilder'
 
 describe('Home', () => {
-  it('shows a list of movies', async () => {
+  beforeEach(() => {
+    jest.spyOn(movieService, 'favorite').mockResolvedValue([])
+  })
+
+  it('shows a loading', async () => {
     jest.spyOn(movieService, 'popular').mockResolvedValue(aMovieCollection())
 
     renderHome()
 
-    expect(await screen.findByText(aMovieCollection().results[0].title)).toBeDefined()
+    expect(await screen.findByText('Loading...')).toBeDefined()
+    await waitForElementToBeRemoved(() => screen.getByText('Loading...'))
   })
 })
 
