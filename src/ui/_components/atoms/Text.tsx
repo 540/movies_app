@@ -12,6 +12,7 @@ interface Props extends Margins {
   onClick?: () => void
   size?: FontSize
   bold?: boolean
+  pointer?: boolean
 }
 
 const RawText = ({ as: As, onClick, children }: Props) => {
@@ -47,6 +48,6 @@ export const Text = styled(RawText)<Props>`
   font-weight: ${p => (p.bold ? 'bold' : 'normal')};
 
   :hover {
-    cursor: ${p => (p.onClick ? 'pointer' : 'text')};
+    cursor: ${p => (p.onClick || p.pointer ? 'pointer' : 'text')};
   }
 `

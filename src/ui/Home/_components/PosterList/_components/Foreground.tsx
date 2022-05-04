@@ -21,7 +21,7 @@ export const DetailSummary = ({ movie }: Props) => (
     <Link href={`/detail/${movie.id}`}>
       <Box horizontal="base">
         <PrimaryButton>
-          <Text as="span" size="medium">
+          <Text as="span" size="medium" pointer>
             Ver Detalles
           </Text>
         </PrimaryButton>

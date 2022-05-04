@@ -10,10 +10,9 @@ export const useQueryService = <Data>(
   deps: any[],
   service: () => Promise<Data>,
   options: QueryOptions<Data> = {}
-) => {
-  return useQuery<Data, Error>([key, ...deps], service, {
+) =>
+  useQuery<Data, Error>([key, ...deps], service, {
     retry: false,
     onSuccess: data => options.onSuccess?.(data),
     enabled: options.enabled ?? true
   })
-}

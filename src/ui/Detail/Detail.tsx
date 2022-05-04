@@ -29,7 +29,7 @@ export const Detail = ({ movie, actors, toggleFavorite, isFavorite, goBack }: Pr
               Fecha de estreno: {movie?.releaseDate}
             </Text>
             <PrimaryButton onClick={() => toggleFavorite(movie!.id)}>
-              <Text as="span" bold size="medium">
+              <Text as="span" bold size="medium" pointer>
                 {isFavorite ? 'Eliminar de favoritos' : 'Agregar a favoritos'}
               </Text>
             </PrimaryButton>
