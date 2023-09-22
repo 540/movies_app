@@ -1,0 +1,338 @@
+@import 'src/ui/styles/tools/mixins/fonts';
+@import 'src/ui/styles/tools/mediaQueries';
+
+.mobile-xs-300 {
+  @include font-xs-300;
+}
+
+.mobile-xs-500 {
+  @include font-xs-500;
+}
+
+.mobile-xs-700 {
+  @include font-xs-700;
+}
+
+.mobile-s-300 {
+  @include font-s-300;
+}
+
+.mobile-s-500 {
+  @include font-s-500;
+}
+
+.mobile-s-700 {
+  @include font-s-700;
+}
+
+.mobile-m-300 {
+  @include font-m-300;
+}
+
+.mobile-m-500 {
+  @include font-m-500;
+}
+
+.mobile-m-700 {
+  @include font-m-700;
+}
+
+.mobile-link {
+  @include font-link;
+}
+
+.mobile-button {
+  @include font-button;
+}
+
+.mobile-l-300 {
+  @include font-l-300;
+}
+
+.mobile-l-700 {
+  @include font-l-700;
+}
+
+.mobile-xl-300 {
+  @include font-xl-300;
+}
+
+.mobile-xl-700 {
+  @include font-xl-700;
+}
+
+.mobile-2xl-700 {
+  @include font-2xl-700;
+}
+
+.mobile-3xl-700 {
+  @include font-3xl-700;
+}
+
+.mobile-4xl-500 {
+  @include font-4xl-500;
+}
+
+@media #{$fromTablet} {
+  .tablet-xs-300 {
+    @include font-xs-300;
+  }
+
+  .tablet-xs-500 {
+    @include font-xs-500;
+  }
+
+  .tablet-xs-700 {
+    @include font-xs-700;
+  }
+
+  .tablet-s-300 {
+    @include font-s-300;
+  }
+
+  .tablet-s-500 {
+    @include font-s-500;
+  }
+
+  .tablet-s-700 {
+    @include font-m-700;
+  }
+
+  .tablet-link {
+    @include font-link;
+  }
+
+  .tablet-button {
+    @include font-button;
+  }
+
+  .tablet-m-300 {
+    @include font-m-300;
+  }
+
+  .tablet-m-500 {
+    @include font-m-500;
+  }
+
+  .tablet-m-700 {
+    @include font-m-700;
+  }
+
+  .tablet-l-300 {
+    @include font-l-300;
+  }
+
+  .tablet-l-700 {
+    @include font-l-700;
+  }
+
+  .tablet-xl-300 {
+    @include font-xl-300;
+  }
+
+  .tablet-xl-700 {
+    @include font-xl-700;
+  }
+
+  .tablet-2xl-700 {
+    @include font-2xl-700;
+  }
+
+  .tablet-3xl-700 {
+    @include font-3xl-700;
+  }
+
+  .tablet-4xl-500 {
+    @include font-4xl-500;
+  }
+}
+
+@media #{$fromLaptop} {
+  .laptop-xs-300 {
+    @include font-xs-300;
+  }
+
+  .laptop-xs-500 {
+    @include font-xs-500;
+  }
+
+  .laptop-xs-700 {
+    @include font-xs-700;
+  }
+
+  .laptop-s-300 {
+    @include font-s-300;
+  }
+
+  .laptop-s-500 {
+    @include font-s-500;
+  }
+
+  .laptop-s-700 {
+    @include font-s-700;
+  }
+
+  .laptop-link {
+    @include font-link;
+  }
+
+  .laptop-button {
+    @include font-button;
+  }
+
+  .laptop-m-300 {
+    @include font-m-300;
+  }
+
+  .laptop-m-500 {
+    @include font-m-500;
+  }
+
+  .laptop-m-700 {
+    @include font-m-700;
+  }
+
+  .laptop-l-300 {
+    @include font-l-300;
+  }
+
+  .laptop-l-700 {
+    @include font-l-700;
+  }
+
+  .laptop-xl-300 {
+    @include font-xl-300;
+  }
+
+  .laptop-xl-700 {
+    @include font-xl-700;
+  }
+
+  .laptop-2xl-700 {
+    @include font-2xl-700;
+  }
+
+  .laptop-3xl-700 {
+    @include font-3xl-700;
+  }
+
+  .laptop-4xl-500 {
+    @include font-4xl-500;
+  }
+}
+
+@media #{$onlyDesktop} {
+  .desktop-xs-300 {
+    @include font-xs-300;
+  }
+
+  .desktop-xs-500 {
+    @include font-xs-500;
+  }
+
+  .desktop-xs-700 {
+    @include font-xs-700;
+  }
+
+  .desktop-s-300 {
+    @include font-s-300;
+  }
+
+  .desktop-s-500 {
+    @include font-s-500;
+  }
+
+  .desktop-s-700 {
+    @include font-s-700;
+  }
+
+  .desktop-link {
+    @include font-link;
+  }
+
+  .desktop-button {
+    @include font-button;
+  }
+
+  .desktop-m-300 {
+    @include font-m-300;
+  }
+
+  .desktop-m-500 {
+    @include font-m-500;
+  }
+
+  .desktop-m-700 {
+    @include font-m-700;
+  }
+
+  .desktop-l-300 {
+    @include font-l-300;
+  }
+
+  .desktop-l-700 {
+    @include font-l-700;
+  }
+
+  .desktop-xl-300 {
+    @include font-xl-300;
+  }
+
+  .desktop-xl-700 {
+    @include font-xl-700;
+  }
+
+  .desktop-2xl-700 {
+    @include font-2xl-700;
+  }
+
+  .desktop-3xl-700 {
+    @include font-3xl-700;
+  }
+
+  .desktop-4xl-500 {
+    @include font-4xl-500;
+  }
+}
+
+/** COLORS **/
+.color-light {
+  color: var(--color-text-light);
+}
+
+.color-mid {
+  color: var(--color-text-mid);
+}
+
+.color-primary {
+  color: var(--color-text-primary);
+}
+
+.color-dark {
+  color: var(--color-text-dark);
+}
+
+.color-fill-01 {
+  color: var(--color-fill-neutral-03);
+}
+
+.color-disabled {
+  color: var(--color-text-disabled);
+  -webkit-text-fill-color: var(--color-text-disabled);
+}
+
+.color-support-success {
+  color: var(--color-support-success);
+}
+
+.color-support-error {
+  color: var(--color-support-error);
+}
+
+.toUppercase {
+  text-transform: uppercase;
+}
+
+.centered {
+  text-align: center;
+}

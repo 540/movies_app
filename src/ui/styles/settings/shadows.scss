@@ -1,0 +1,8 @@
+@import 'src/ui/styles/tools/functions';
+
+:root {
+  --shadow-soft: #{toRem(0)} #{toRem(4)} #{toRem(8)} rgba(0, 0, 0, 0.1);
+  --shadow-mid: #{toRem(0)} #{toRem(4)} #{toRem(12)} rgba(0, 0, 0, 0.05);
+  --shadow-hard: #{toRem(0)} #{toRem(6)} #{toRem(12)} rgba(0, 0, 0, 0.1);
+  --shadow-inverted: #{toRem(0)} #{toRem(6)} #{toRem(12)} rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,67 @@
+@import 'src/ui/styles/tools/mixins/containers';
+@import 'src/ui/styles/tools/functions';
+
+.backdropContainer {
+  @include fullWidthContainer;
+
+  position: relative;
+
+  min-width: 100dvw;
+  height: toRem(600);
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.backdropTitleContainer {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: var(--grid-lateral-gap);
+
+  transform: translateY(-50%);
+
+  max-width: 35%;
+
+  text-shadow: 0 0 toRem(10) rgba(0, 0, 0, 0.75);
+}
+
+.backdropTitle {
+  display: -webkit-box;
+  overflow: hidden;
+
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.popularMoviesTitle {
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-l);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: var(--space-m);
+  grid-row-gap: var(--space-xl);
+
+  @media #{$fromTablet} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media #{$fromLaptop} {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.cardContainer {
+  display: flex;
+  gap: var(--space-xs);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

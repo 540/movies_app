@@ -1,0 +1,116 @@
+{
+  "extends": "stylelint-config-recommended-scss",
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "scss/operator-no-newline-after": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
+      }
+    ],
+    "order/properties-order": [
+      [
+        {
+          "groupName": "position",
+          "emptyLineBefore": "always",
+          "noEmptyLineBetween": true,
+          "properties": [
+            "content",
+            "position",
+            "z-index",
+            "top",
+            "right",
+            "bottom",
+            "left"
+          ]
+        },
+        {
+          "groupName": "display",
+          "emptyLineBefore": "always",
+          "noEmptyLineBetween": true,
+          "properties": [
+            "display",
+            "gap",
+            "place-items",
+            "flex-direction",
+            "flex-wrap",
+            "flex-flow",
+            "justify-content",
+            "justify-items",
+            "align-items",
+            "align-content",
+            "order",
+            "flex-grow",
+            "flex-shrink",
+            "flex-basis",
+            "flex",
+            "align-self",
+            "grid-area",
+            "grid-auto-columns",
+            "grid-auto-flow",
+            "grid-auto-rows",
+            "grid-column",
+            "grid-column-end",
+            "grid-column-start",
+            "grid-row",
+            "grid-row-end",
+            "grid-row-start",
+            "grid-template",
+            "grid-template-areas",
+            "grid-template-columns",
+            "grid-template-rows,",
+            "grid-template-rows",
+            "grid-column-gap",
+            "grid-row-gap",
+            "column-gap",
+            "row-gap",
+            "opacity",
+            "overflow",
+            "transform"
+          ]
+        },
+        {
+          "groupName": "box-model",
+          "emptyLineBefore": "always",
+          "noEmptyLineBetween": true,
+          "properties": [
+            "margin",
+            "margin-top",
+            "margin-bottom",
+            "margin-left",
+            "margin-right",
+            "box-shadow",
+            "border",
+            "border-bottom",
+            "border-top",
+            "border-left",
+            "border-right",
+            "border-top-left-radius",
+            "border-bottom-left-radius",
+            "border-top-right-radius",
+            "border-bottom-right-radius",
+            "border-radius",
+            "border-color",
+            "box-sizing",
+            "width",
+            "max-width",
+            "min-width",
+            "height",
+            "max-height",
+            "min-height",
+            "padding",
+            "padding-top",
+            "padding-bottom",
+            "padding-left",
+            "padding-right"
+          ]
+        }
+      ],
+      {
+        "unspecified": "bottom",
+        "emptyLineBeforeUnspecified": "always"
+      }
+    ]
+  }
+}

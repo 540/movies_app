@@ -1,0 +1,19 @@
+@import 'src/ui/styles/tools/mixins/containers';
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: var(--color-bg-white);
+}
+
+.content {
+  @include fullWidthContainerLateralPadding;
+  width: 100%;
+
+  background-color: var(--color-bg-white);
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://unpkg.com/knip@2/schema.json",
+  "entry": ["src/**/*.{ts,tsx}"],
+  "project": ["{src}/**/*.{js,jsx,ts,tsx}"],
+  "exclude": ["enumMembers"],
+  "ignoreBinaries": ["open", "xdg-open"],
+  "ignoreDependencies": [
+    "eslint-config-next",
+    "@testing-library/jest-dom",
+    "@testing-library/user-event",
+    "@types/jest",
+    "jest-environment-jsdom"
+  ]
+}

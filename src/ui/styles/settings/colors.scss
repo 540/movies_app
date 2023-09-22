@@ -1,0 +1,42 @@
+:root {
+  --color-support-success: #197625;
+  --color-support-success-light: #d9e8db;
+  --color-support-warning: #ffc83d;
+  --color-support-warning-light: #ffedbe;
+  --color-support-error: #e40f13;
+  --color-support-error-light: #fbd7d8;
+  --color-support-info: #0091f0;
+  --color-support-info-light: #e5f4fe;
+
+  --color-bg-light: #f5f5f6;
+  --color-bg-white: #ffffff;
+  --color-bg-overlay: rgba(56, 64, 68, 0.7);
+
+  --color-fill-neutral-00: #ffffff;
+  --color-fill-neutral-01: #f5f5f6;
+  --color-fill-neutral-02: #d7d9da;
+  --color-fill-neutral-03: #afb3b4;
+  --color-fill-neutral-04: #384044;
+  --color-fill-ocean-100: #2f5a76;
+  --color-fill-ocean-15: #e0e6ea;
+  --color-fill-ocean-20: #acbdc8;
+  --color-fill-ocean-10: #eaeef1;
+  --color-fill-ocean-100-gradient: linear-gradient(
+    99.82deg,
+    #30a2bf 0%,
+    #2f5a76 100%
+  );
+
+  --color-divider: #d7d9da;
+
+  --color-text-primary: #2f5a76;
+  --color-text-light: #ffffff;
+  --color-text-mid: #606669;
+  --color-text-dark: #384044;
+  --color-text-disabled: #afb3b4;
+
+  --color-field-enabled: #384044;
+  --color-field-hover: #384044;
+  --color-field-active: #2f5a76;
+  --color-field-disabled: #afb3b4;
+}

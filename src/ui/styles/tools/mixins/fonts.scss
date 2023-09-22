@@ -1,0 +1,180 @@
+@import 'src/ui/styles/tools/functions';
+
+$font-size-xs: #{toRem(12)};
+$font-size-s: #{toRem(14)};
+$font-size-m: #{toRem(16)};
+$font-size-l: #{toRem(20)};
+$font-size-xl: #{toRem(24)};
+$font-size-2xl: #{toRem(28)};
+$font-size-3xl: #{toRem(36)};
+$font-size-4xl: #{toRem(48)};
+$font-size-5xl: #{toRem(60)};
+
+$line-height-xs: #{toRem(16)};
+$line-height-s: #{toRem(20)};
+$line-height-m: #{toRem(24)};
+$line-height-l: #{toRem(30)};
+$line-height-xl: #{toRem(34)};
+$line-height-2xl: #{toRem(36)};
+$line-height-3xl: #{toRem(42)};
+$line-height-4xl: #{toRem(56)};
+$line-height-5xl: #{toRem(70)};
+
+$font-weight-300: 300;
+$font-weight-500: 500;
+$font-weight-700: 700;
+
+$letter-spacing-01: 0em;
+$letter-spacing-02: 0.0015em;
+$letter-spacing-03: 0.0025em;
+$letter-spacing-04: 0.004em;
+$letter-spacing-05: 0.005em;
+$letter-spacing-06: 0.015em;
+
+/** XS **/
+
+@mixin font-xs-300 {
+  font-size: #{$font-size-xs};
+  line-height: #{$line-height-xs};
+  font-weight: #{$font-weight-300};
+  letter-spacing: #{$letter-spacing-04};
+}
+
+@mixin font-xs-500 {
+  font-size: #{$font-size-xs};
+  line-height: #{$line-height-xs};
+  font-weight: #{$font-weight-500};
+  letter-spacing: #{$letter-spacing-06};
+}
+
+@mixin font-xs-700 {
+  font-size: #{$font-size-xs};
+  line-height: #{$line-height-xs};
+  font-weight: #{$font-weight-700};
+  letter-spacing: #{$letter-spacing-06};
+}
+
+/** S **/
+
+@mixin font-s-300 {
+  font-size: #{$font-size-s};
+  line-height: #{$line-height-s};
+  font-weight: #{$font-weight-300};
+  letter-spacing: #{$letter-spacing-03};
+}
+
+@mixin font-s-500 {
+  font-size: #{$font-size-s};
+  line-height: #{$line-height-s};
+  font-weight: #{$font-weight-500};
+  letter-spacing: #{$letter-spacing-03};
+}
+
+@mixin font-s-700 {
+  font-size: #{$font-size-s};
+  line-height: #{$line-height-s};
+  font-weight: #{$font-weight-700};
+  letter-spacing: #{$letter-spacing-03};
+}
+
+@mixin font-s-link {
+  font-size: #{$font-size-s};
+  font-weight: #{$font-weight-500};
+  letter-spacing: #{$letter-spacing-03};
+}
+
+/** M **/
+
+@mixin font-m-300 {
+  font-size: #{$font-size-m};
+  line-height: #{$line-height-m};
+  font-weight: #{$font-weight-300};
+  letter-spacing: #{$letter-spacing-05};
+}
+
+@mixin font-m-500 {
+  font-size: #{$font-size-m};
+  line-height: #{$line-height-m};
+  font-weight: #{$font-weight-500};
+  letter-spacing: #{$letter-spacing-05};
+}
+
+@mixin font-m-700 {
+  font-size: #{$font-size-m};
+  line-height: #{$line-height-m};
+  font-weight: #{$font-weight-700};
+  letter-spacing: #{$letter-spacing-05};
+}
+
+@mixin font-link {
+  font-size: #{$font-size-m};
+  line-height: #{$line-height-m};
+  font-weight: #{$font-weight-500};
+  letter-spacing: #{$letter-spacing-05};
+}
+
+@mixin font-button {
+  font-size: #{$font-size-m};
+  line-height: #{$line-height-l};
+  font-weight: #{$font-weight-700};
+  letter-spacing: #{$letter-spacing-05};
+}
+
+/** L **/
+
+@mixin font-l-300 {
+  font-size: #{$font-size-l};
+  line-height: #{$line-height-l};
+  font-weight: #{$font-weight-300};
+  letter-spacing: #{$letter-spacing-02};
+}
+
+@mixin font-l-700 {
+  font-size: #{$font-size-l};
+  line-height: #{$line-height-l};
+  font-weight: #{$font-weight-700};
+  letter-spacing: #{$letter-spacing-02};
+}
+
+/** XL **/
+
+@mixin font-xl-300 {
+  font-size: #{$font-size-xl};
+  line-height: #{$line-height-xl};
+  font-weight: #{$font-weight-300};
+  letter-spacing: #{$letter-spacing-01};
+}
+
+@mixin font-xl-700 {
+  font-size: #{$font-size-xl};
+  line-height: #{$line-height-xl};
+  font-weight: #{$font-weight-700};
+  letter-spacing: #{$letter-spacing-01};
+}
+
+/** 2XL **/
+
+@mixin font-2xl-700 {
+  font-size: #{$font-size-2xl};
+  line-height: #{$line-height-2xl};
+  font-weight: #{$font-weight-700};
+  letter-spacing: #{$letter-spacing-02};
+}
+
+/** 3XL **/
+
+@mixin font-3xl-700 {
+  font-size: #{$font-size-3xl};
+  line-height: #{$line-height-3xl};
+  font-weight: #{$font-weight-700};
+  letter-spacing: #{$letter-spacing-03};
+}
+
+/** 4XL **/
+
+@mixin font-4xl-500 {
+  font-size: #{$font-size-4xl};
+  line-height: #{$line-height-4xl};
+  font-weight: #{$font-weight-500};
+  letter-spacing: #{$letter-spacing-01};
+}

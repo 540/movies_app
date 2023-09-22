@@ -1,0 +1,23 @@
+@import 'src/ui/styles/tools/functions';
+
+@function calculateFromGrid($grid-base, $multiplier) {
+  $result: $grid-base * $multiplier;
+
+  @return $result;
+}
+
+:root {
+  $grid-base: 8;
+
+  --icon-3xs: #{toRem(calculateFromGrid($grid-base, 0.5))}; // 4px
+  --icon-2xs: #{toRem(calculateFromGrid($grid-base, 1))}; // 8px
+  --icon-xs: #{toRem(calculateFromGrid($grid-base, 1.5))}; // 12px
+  --icon-s: #{toRem(calculateFromGrid($grid-base, 2))}; // 16px
+  --icon-m: #{toRem(calculateFromGrid($grid-base, 2.5))}; // 20px
+  --icon-l: #{toRem(calculateFromGrid($grid-base, 3))}; // 24px
+  --icon-xl: #{toRem(calculateFromGrid($grid-base, 4))}; // 32px
+  --icon-2xl: #{toRem(calculateFromGrid($grid-base, 5))}; // 40px
+  --icon-3xl: #{toRem(calculateFromGrid($grid-base, 6))}; // 48px
+  --icon-4xl: #{toRem(calculateFromGrid($grid-base, 8))}; // 64px
+  --icon-5xl: #{toRem(calculateFromGrid($grid-base, 12))}; // 96px
+}
