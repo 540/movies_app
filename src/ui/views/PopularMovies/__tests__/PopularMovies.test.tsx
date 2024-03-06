@@ -3,9 +3,9 @@ import { screen } from '@testing-library/react'
 import { mock, MockProxy } from 'jest-mock-extended'
 import { render } from '@/ui/__tests__/render'
 import { GetPopularMoviesAndItsHighlight } from '@/core/Movie/usecase/GetPopularMoviesAndItsHighlight'
-import { container } from '@/core/Shared/_di'
 import { MovieBuilder } from '@/core/Movie/domain/__mocks__/MovieBuilder'
 import { PopularMovies } from '@/ui/views/PopularMovies'
+import { registerModule } from '@/_di/mocks/registerMockModule'
 
 describe('Películas populares', () => {
   let mockGetPopularMoviesAndItsHighlightUseCase: MockProxy<GetPopularMoviesAndItsHighlight>
@@ -14,11 +14,10 @@ describe('Películas populares', () => {
     mockGetPopularMoviesAndItsHighlightUseCase =
       mock<GetPopularMoviesAndItsHighlight>()
 
-    container.register({
-      getPopularMoviesAndItsHighlightUseCase: asValue(
-        mockGetPopularMoviesAndItsHighlightUseCase,
-      ),
-    })
+    registerModule(
+      'getPopularMoviesAndItsHighlightUseCase',
+      asValue(mockGetPopularMoviesAndItsHighlightUseCase),
+    )
   })
 
   it('muestra la destacada y no el resto cuando no hay otras', async () => {
@@ -28,7 +27,7 @@ describe('Películas populares', () => {
       popularMovies: [],
     })
 
-    render(await PopularMovies())
+    render(<PopularMovies />)
 
     expect(await screen.findByText(highlightedMovie.title)).toBeInTheDocument()
   })
@@ -46,7 +45,7 @@ describe('Películas populares', () => {
       popularMovies,
     })
 
-    render(await PopularMovies())
+    render(<PopularMovies />)
 
     expect(await screen.findByText(highlightedMovie.title)).toBeInTheDocument()
     for (const movie of popularMovies) {

@@ -1,13 +1,7 @@
 import '@testing-library/jest-dom'
-import { container } from '@/core/Shared/_di'
-import { modules as movieModules } from '@/core/Movie/_di'
-import { modules as sharedModules } from '@/core/Shared/_di/registerModules'
 import { asValue } from 'awilix'
-
-const modules = {
-  ...movieModules,
-  ...sharedModules,
-}
+import { container } from '@/_di/container'
+import { modules } from '@/_di/modules'
 
 beforeEach(() => {
   container.register({

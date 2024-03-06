@@ -1,47 +1,63 @@
-import './di'
-import { FC } from 'react'
-import { container } from '@/core/Shared/_di'
+import { FC, useEffect, useState } from 'react'
 import { Movie } from '@/core/Movie/domain/Movie'
 import { Text } from '@/ui/components/atoms/Text'
 import { Image } from '@/ui/components/atoms/Image'
 import styles from './PopularMovies.module.scss'
 import { ImageSize } from '@/core/Movie/infrastructure/ImageSize'
+import { inject } from '@/_di/container'
 
-export const PopularMovies = async () => {
-  const { popularMovies, highlightedMovie } = await container
-    .resolve('getPopularMoviesAndItsHighlightUseCase')
-    .execute()
+export const PopularMovies = () => {
+  const [popularMovies, setPopularMovies] = useState<Movie[]>([])
+  const [highlightedMovie, setHighlightedMovie] = useState<Movie>()
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      const { popularMovies, highlightedMovie } = await inject(
+        'getPopularMoviesAndItsHighlightUseCase',
+      ).execute()
+
+      setPopularMovies(popularMovies)
+      setHighlightedMovie(highlightedMovie)
+    }
+
+    fetchMovies()
+  })
+
   return (
     <div className={styles.container}>
-      <picture className={styles.backdropContainer}>
-        <Image
-          src={`${container.resolve('envManager').getTmdbImageUrl()}/${
-            ImageSize.backdrop.original
-          }${highlightedMovie.backdropUrl}`}
-          className={styles.backdrop}
-          alt=""
-          width={3840}
-          height={2160}
-          priority={true}
-        />
-        <div className={styles.backdropTitleContainer}>
-          <Text
-            fontStyle="4xl-500"
-            color="light"
-            className={styles.backdropTitle}
-          >
-            {highlightedMovie.title}
-          </Text>
-          <Text
-            as="p"
-            fontStyle="m-500"
-            color="light"
-            className={styles.backdropTitle}
-          >
-            {highlightedMovie.description}
-          </Text>
-        </div>
-      </picture>
+      {highlightedMovie && (
+        <>
+          <picture className={styles.backdropContainer}>
+            <Image
+              src={`${inject('envManager').getTmdbImageUrl()}/${
+                ImageSize.backdrop.original
+              }${highlightedMovie.backdropUrl}`}
+              className={styles.backdrop}
+              alt=""
+              width={3840}
+              height={2160}
+              priority={true}
+            />
+            <div className={styles.backdropTitleContainer}>
+              <Text
+                fontStyle="4xl-500"
+                color="light"
+                className={styles.backdropTitle}
+              >
+                {highlightedMovie.title}
+              </Text>
+              <Text
+                as="p"
+                fontStyle="m-500"
+                color="light"
+                className={styles.backdropTitle}
+              >
+                {highlightedMovie.description}
+              </Text>
+            </div>
+          </picture>
+        </>
+      )}
       <Text
         as="h1"
         fontStyle="3xl-700"
@@ -68,7 +84,7 @@ const MovieCard: FC<MovieProps> = ({ movie, isFirstSeen }) => {
   return (
     <div className={styles.cardContainer}>
       <Image
-        src={`${container.resolve('envManager').getTmdbImageUrl()}/${
+        src={`${inject('envManager').getTmdbImageUrl()}/${
           ImageSize.poster.w342
         }${movie.posterUrl}`}
         alt=""

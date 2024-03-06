@@ -25,7 +25,7 @@ describe('repositorio de películas', () => {
         .build(),
     )
     const repository = new ApiMovieRepository({
-      moviesApiClient: mockApiClient,
+      apiClient: mockApiClient,
       envManager: mockEnvManager,
     })
 

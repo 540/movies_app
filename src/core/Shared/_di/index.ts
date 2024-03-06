@@ -1,6 +1,8 @@
-import { createContainer, InjectionMode } from 'awilix'
-import type { Container } from './container'
+import { asClass, asValue } from 'awilix'
+import { TheMovieDBApiClient } from '@/core/Shared/infrastructure/TheMovieDBApiClient'
+import { envManager } from '@/core/Shared/infrastructure/envManager'
 
-export const container = createContainer<Container>({
-  injectionMode: InjectionMode.PROXY,
-})
+export const modules = {
+  apiClient: asClass(TheMovieDBApiClient),
+  envManager: asValue(envManager),
+}

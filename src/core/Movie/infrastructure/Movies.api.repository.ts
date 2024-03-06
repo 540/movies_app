@@ -5,21 +5,21 @@ import { PopularMoviesDTO } from '@/core/Movie/infrastructure/PopularMoviesDTO'
 import type { EnvManager } from '@/core/Shared/infrastructure/envManager'
 
 interface Dependencies {
-  moviesApiClient: ApiClient
+  apiClient: ApiClient
   envManager: EnvManager
 }
 
 export class ApiMovieRepository implements MoviesRepository {
-  private moviesApiClient: ApiClient
+  private apiClient: ApiClient
   private envManager: EnvManager
 
-  constructor({ moviesApiClient, envManager }: Dependencies) {
-    this.moviesApiClient = moviesApiClient
+  constructor({ apiClient, envManager }: Dependencies) {
+    this.apiClient = apiClient
     this.envManager = envManager
   }
 
   async findPopular() {
-    const moviesDTO = await this.moviesApiClient.get<PopularMoviesDTO>(
+    const moviesDTO = await this.apiClient.get<PopularMoviesDTO>(
       `/movie/popular?api_key=${this.envManager.getTmbdApiKey()}&language=en-EN`,
     )
 

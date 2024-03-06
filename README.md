@@ -4,6 +4,7 @@ First, define the following environment variables in a `.env` file:
 
 - NEXT_PUBLIC_THE_MOVIE_DB_BASE_URL
 - NEXT_PUBLIC_THE_MOVIE_DB_API_KEY
+- NEXT_PUBLIC_THE_MOVIE_DB_IMAGE_URL
 
 Then, run the development server:
 
